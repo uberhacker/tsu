@@ -63,10 +63,10 @@ class SelfUpdateCommand extends TerminusCommand {
           }
         }
         // Check if installed via 'git clone'.
-        $path = explode('/', dirname($cmd));
+        $path = explode($slash, dirname($cmd));
         $bin = array_pop($path);
         if ($bin == 'bin') {
-          $dir = implode('/', $path);
+          $dir = implode($slash, $path);
           $git_dir = "{$dir}{$slash}.git";
           if (is_dir($git_dir)) {
             exec("cd \"$dir\";git pull", $output);
