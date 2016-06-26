@@ -63,7 +63,7 @@ class SelfUpdateCommand extends TerminusCommand {
                 $json_exists = true;
               }
             } else {
-              $json = "{$composer_dir}composer.json";
+              $json = "{$composer_dir}/composer.json";
               if (file_exists($json)) {
                 $json_exists = true;
               }
