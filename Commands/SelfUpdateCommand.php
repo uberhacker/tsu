@@ -40,6 +40,7 @@ class SelfUpdateCommand extends TerminusCommand {
       $patterns = array(
         "|({$home})/vendor/bin/terminus|U",
         "|({$home}/.composer)/vendor/bin/terminus|U",
+        "|({$home}/.config/composer)/vendor/bin/terminus|U",
       );
       if ($windows) {
         $patterns = array(
